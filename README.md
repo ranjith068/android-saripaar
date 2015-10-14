@@ -106,13 +106,13 @@ Maven
     <dependency>
         <groupId>com.mobsandgeeks</groupId>
         <artifactId>android-saripaar</artifactId>
-        <version>2.0.2</version>
+        <version>(latest version)</version>
     </dependency>
 
 Gradle
 ---------------------
     dependencies {
-        compile 'com.mobsandgeeks:android-saripaar:2.0.2'
+        compile 'com.mobsandgeeks:android-saripaar:(latest version)'
     }
 
 Snapshots
@@ -121,7 +121,7 @@ In your `{project_base}/build.gradle` file, include the following.
 
     allprojects {
         repositories {
-            mavenCentral()
+            jcenter()
             maven {
                 url "https://oss.sonatype.org/content/repositories/snapshots/"
             }

@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2014 Mobs & Geeks
+ * Copyright (C) 2015 Mobs & Geeks
  *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file
  * except in compliance with the License. You may obtain a copy of the License at
@@ -14,8 +14,6 @@
 
 package com.mobsandgeeks.saripaar.annotation;
 
-import com.mobsandgeeks.saripaar.rule.NotEmptyRule;
-
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
@@ -23,17 +21,9 @@ import java.lang.annotation.Target;
 
 /**
  * @author Ragunath Jawahar {@literal <rj@mobsandgeeks.com>}
- * @since 2.0
+ * @since 2.1.0
  */
-@ValidateUsing(NotEmptyRule.class)
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.FIELD)
-public @interface NotEmpty {
-    boolean trim()          default false;
-    String emptyText()      default "";
-    int emptyTextResId()    default -1;
-
-    int sequence()          default -1;
-    int messageResId()      default -1;
-    String message()        default "This field is required";
+public @interface Optional {
 }
